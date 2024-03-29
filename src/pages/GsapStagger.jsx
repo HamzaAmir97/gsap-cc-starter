@@ -29,6 +29,8 @@ stagger: {
 
   },[])
 
+  
+
   return (
     <main>
       <h1>GsapStagger</h1>
