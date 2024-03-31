@@ -2,13 +2,11 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const GsapScrollTrigger = () => {
-  // TODO: Implement the gsap scroll trigger
- gsap.registerPlugin(ScrollTrigger);
- const scrollref = useRef(null);
-
+   gsap.registerPlugin(ScrollTrigger);
+  const scrollref = useRef(null);
+  
 
   useGSAP(() => { 
        const pinkBox = gsap.utils.toArray(scrollref.current.children);
@@ -21,11 +19,14 @@ const GsapScrollTrigger = () => {
           scale: 1.5,
           
         } )
-        
+
       
+        }
+      )
+      } 
+      ,[])
+
       
-      
-       
 
 
   return (
