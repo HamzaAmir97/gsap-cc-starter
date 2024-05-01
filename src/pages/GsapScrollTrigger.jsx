@@ -1,32 +1,44 @@
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/all";
+// import { useRef } from "react";
+// import { useGSAP } from "@gsap/react";
+
+// gsap.registerPlugin(ScrollTrigger);
 
 
 const GsapScrollTrigger = () => {
-   gsap.registerPlugin(ScrollTrigger);
-  const scrollref = useRef(null);
+
+  // const scrollref = useRef(); 
+
   
+ 
+  // gsap.to(scrollref.current, {
+  //   // scrollTrigger: {
+  //   //   trigger: scrollref.current,
+  //   //   start: "top top", 
+  //   //   end: "top 20%",
+  //   //   scrub: true
+  //   // }
+  // },[[scope, scrollref]])
+   
+  // // useGSAP(() => { 
+  // //   const Boxs = gsap.utils.toArray(scrollref.current.children);
 
-  useGSAP(() => { 
-       const pinkBox = gsap.utils.toArray(scrollref.current.children);
-
-       pinkBox.forEach((box) => {
-        gsap.to(box, {
-          x: 250,
-          rotation: 360,
-          borderRadius: 100,
-          scale: 1.5,
-          
-        } )
-
-      
-        }
-      )
-      } 
-      ,[])
-
-      
+  // //   // Boxs.forEach((box) => {
+  // //   //   gsap.to(box, {
+  // //   //     x: 150,
+  // //   //     rotation: 360,
+  // //   //     borderRadius: '100%',
+  // //   //     scale: 1.5,
+  //       // scrollTrigger: {
+  //       //   trigger: box,
+  //       //   start: "top top", 
+  //       //   end: "top 20%",
+  //       //   scrub: true
+  //       // }
+  // //   //   });
+  // //   // });
+  // // }, [scope, scrollref]);
 
 
   return (
@@ -80,13 +92,15 @@ const GsapScrollTrigger = () => {
       </div>
 
       <div className="mt-20 w-full h-screen" 
-      ref={scrollref}
+     
       >
         <div
+        // ref={scrollref}
           id="scroll-pink"
           className="scroll-box w-20 h-20 rounded-lg bg-pink-500"
         />
         <div
+          // ref={scrollref}
           id="scroll-orange"
           className="scroll-box w-20 h-20 rounded-lg bg-orange-500"
         />
